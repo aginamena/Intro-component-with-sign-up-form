@@ -1,0 +1,124 @@
+*{
+  /* we remove default browser styling and we want the overall width
+  of an element not to change */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url(images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+.main-page{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  /* the height of this element is inherited from body */
+  height: inherit;
+}
+h1{
+  color:white;
+  font-size: 40px;
+  /* we want the width of h1 to be responsive with smaller screens */
+  max-width: 500px;
+}
+.text{
+  color:white;
+  /* we want the width of h1 to be responsive with smaller screens */
+  max-width: 570px;
+  margin-top: 20px;
+}
+.intro{
+  width:auto;
+}
+
+/* styling form  */
+.sign_in{
+  width: 500px;
+}
+.firstButton{
+  width : 500px;
+  background-color:hsl(248, 32%, 49%);
+  color:white;
+  height:50px;
+  cursor: pointer;
+}
+.price{
+  opacity: 0.8;
+  display:inline;
+}
+form{
+  margin-top: 30px;
+  width : 500px;
+  padding:30px;
+  background-color: white;
+}
+input, .secondButton{
+  height:50px;
+  width:440px;
+}
+.text_field{
+  margin-top: 10px;
+}
+.secondButton{
+  margin-top: 10px;
+  background-color: hsl(154, 59%, 51%);
+  color:white;
+  cursor: pointer;
+}
+.confirm, .TnS{
+  display: inline;
+}
+.confrim_form{
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.TnS{
+  color: hsl(0, 100%, 74%);
+  cursor: pointer;
+}
+
+/* if the screen size is 1120px and smaller perfrom this styling */
+@media(max-width: 1120px){
+  .main-page{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+/* if the screen size is 944px or smaller perform this styling */
+@media(max-width:944px){
+  .main-page{
+    display: block;
+    padding-top:50px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  body{
+    /* at smaller screens the height of the body should be calculated by the browser */
+    height:auto;
+  }
+  .firstButton{
+    margin-top:30px;
+  }
+  h1, .text{
+    width: inherit;
+    /* since this element has a fixed width , we can center it */
+    margin: 0 auto;
+  }
+  .sign_in{
+    /* the width of this element should be the width of its parent*/
+    width:inherit;
+  }
+  form, .firstButton, input, .confirm_form, .secondButton{
+    /* every element shold take 100% of its parent's width */
+    width: 100%;
+  }
+}
+/* @@media(max-width:500px) {
+  .sign_in{
+    width: 70vw;
+  }
+} */
